@@ -7,19 +7,7 @@ const contactForm = document.getElementById('contactForm');
 
 // Toggle Navigation
 function toggleNav() {
-    // Toggle nav
     nav.classList.toggle('active');
-
-    // Animate links
-    navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-            link.style.animation = '';
-        } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-        }
-    });
-
-    // Burger animation
     burger.classList.toggle('active');
 }
 
@@ -42,29 +30,50 @@ function smoothScroll(e) {
     }
 
     const targetId = this.getAttribute('href');
-    const targetPosition = document.querySelector(targetId).offsetTop;
+    const targetElement = document.querySelector(targetId);
+    const headerHeight = header.offsetHeight;
+    const targetPosition = targetElement.offsetTop - headerHeight;
     const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition - 70; // Adjust for header height
-    const duration = 1000;
+    const distance = targetPosition - startPosition;
+    const duration = 800;
     let start = null;
 
     function animation(currentTime) {
         if (start === null) start = currentTime;
         const timeElapsed = currentTime - start;
-        const run = ease(timeElapsed, startPosition, distance, duration);
+        const progress = Math.min(timeElapsed / duration, 1);
+        const run = startPosition + distance * easeOutCubic(progress);
         window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
+        if (progress < 1) requestAnimationFrame(animation);
     }
 
-    // Easing function
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
+    // Smooth easing function
+    function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
     }
 
     requestAnimationFrame(animation);
+}
+
+// Highlight active nav link on scroll
+function updateActiveLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPos = window.pageYOffset + header.offsetHeight + 100;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+
+        if (navLink) {
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        }
+    });
 }
 
 // Form Validation and Submission
@@ -214,8 +223,10 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', smoothScroll);
     });
 
-    // Header Scroll Effect
+    // Header Scroll Effect & active link
     window.addEventListener('scroll', scrollFunction);
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();
 
     // Form Submission
     if (contactForm) {

@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Nicolas Marques</title>
+    <title>Portfolio de Nicolas MARQUES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,12 +14,11 @@
 <header>
     <nav>
         <div class="name-photo-container">
-            <h1>Nicolas Marques</h1>
-            <img src="img/photo_nicolas.jpg" alt="Photo de Nicolas Marques" class="profile-photo">
+            <h1>Mon Portfolio</h1>
         </div>
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#a-propos">À Propos</a></li>
+            <li><a href="#a-propos">Mon Profil</a></li>
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#formation">Formation</a></li>
@@ -34,7 +36,8 @@
 <main>
     <section id="accueil" class="hero">
         <div class="hero-content">
-            <h1>Nicolas Marques</h1>
+            <img src="img/photo_nicolas.jpg" alt="Photo de Nicolas MARQUES" class="profile-photo">
+            <h1>Nicolas MARQUES</h1>
             <h2>ALTERNANT EN BUT 3 INFORMATIQUE</h2>
             <a href="#contact" class="btn primary-btn">Me contacter</a>
         </div>
@@ -42,42 +45,34 @@
 
     <section id="a-propos" class="about">
         <div class="container">
-            <h2 class="section-title">À Propos de Moi</h2>
+            <h2 class="section-title">Mon Profil</h2>
             <div class="about-content">
+                <div class="about-badges">
+                    <div class="about-badge">
+                        <i class="fas fa-user"></i>
+                        <span>Nicolas MARQUES</span>
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>21 ans</span>
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nice, France</span>
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-home"></i>
+                        <span>40 avenue Joseph Giordan</span>
+                    </div>
+                </div>
                 <div class="about-text">
                     <p>
-                        Actuellement en alternance pour mon BUT 2 et 3 en Informatique, je suis très intéressé par le développement et les nouvelles technologies.
+                        Actuellement en alternance pour ma 3<sup>ème</sup> année de BUT Informatique, je suis très intéressé par le développement et les nouvelles technologies.
                         Ma formation m'a permis de développer de solides compétences en développement, analyse et conception.
                     </p>
                     <p>
                         Doté d'un bon esprit d'équipe, je suis également rigoureux, créatif, capable de m'adapter et garde un esprit critique.
                     </p>
-                </div>
-                <div class="about-info">
-                    <div class="info-item">
-                        <span class="info-label">Nom:</span>
-                        <span class="info-value">Nicolas Marques </span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Email:</span>
-                        <span class="info-value">nicolas.marques.nice@gmail.com </span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Téléphone:</span>
-                        <span class="info-value">+33 6 29 67 64 54 </span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Localisation:</span>
-                        <span class="info-value">Nice, France </span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Adresse:</span>
-                        <span class="info-value">40 avenue Joseph Giordan</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Âge:</span>
-                        <span class="info-value">21 ans </span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -167,6 +162,8 @@
     <section id="projets" class="projects">
         <div class="container">
             <h2 class="section-title">Projets</h2>
+
+            <h3 class="projects-subsection-title">Projets IUT</h3>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -186,7 +183,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="project-header">
                         <h3>POC-SQL</h3>
@@ -206,6 +203,66 @@
                     </div>
                 </div>
             </div>
+
+            <h3 class="projects-subsection-title">Projets Personnels</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>BotMinecraftSpeedrun</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Bot automatisé de speedrun Minecraft utilisant Mineflayer, capable de jouer automatiquement du spawn jusqu'à la défaite de l'Ender Dragon.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Mineflayer</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Winchezy/BotMinecraftSpeedrun" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            Voir sur GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Struggle Islands</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Jeu multijoueur de survie où deux joueurs s'affrontent sur des îles séparées. Collectez des ressources, fabriquez des outils et éliminez l'adversaire.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Canvas 2D</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://winchezy.itch.io/stuggle-islands?secret=zE07E2EHcO4xCOCXduvFeLjPhfs" target="_blank" class="project-link">
+                            <i class="fas fa-gamepad"></i>
+                            Voir sur itch.io
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Hide and Seek</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Jeu de survie en First Person où vous devez échapper à un monstre intelligent dans un labyrinthe généré procéduralement. 5 niveaux de difficulté croissante.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://winchezy.itch.io/hide-and-seek?secret=PPj7XPbsJqffEh6cX27SrA9SNus" target="_blank" class="project-link">
+                            <i class="fas fa-gamepad"></i>
+                            Voir sur itch.io
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -215,20 +272,34 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023 - aujourd'hui</div>
+                    <div class="timeline-date">2025 - 2026</div>
                     <div class="timeline-content">
-                        <h3>BUT Informatique</h3>
-                        <p>IUT site de Nice puis site de Sophia Antipolis</p>
-                        <p>BUT 2 en informatique traditionnel puis en alternance.</p>
+                        <h3>BUT 3 Informatique - Alternance</h3>
+                        <p>IUT de Sophia Antipolis</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>BUT 2 Informatique - Alternance</h3>
+                        <p>IUT de Sophia Antipolis</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>BUT 2 Informatique - Traditionnel</h3>
+                        <p>IUT de Nice</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2022 - 2023</div>
                     <div class="timeline-content">
-                        <h3>BUT Informatique</h3>
-                        <p>IUT de Nice </p>
-                        <p>BUT 1 traditionnel.</p>
+                        <h3>BUT 1 Informatique - Traditionnel</h3>
+                        <p>IUT de Nice</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -236,9 +307,9 @@
                     <div class="timeline-date">2022</div>
                     <div class="timeline-content">
                         <h3>Baccalauréat Général</h3>
-                        <p>Lycée Les Eucalyptus, 06200 Nice </p>
-                        <p>Spécialités: Mathématiques et NSI </p>
-                        <p>Mention: Bien </p>
+                        <p>Lycée Les Eucalyptus, 06200 Nice</p>
+                        <p>Spécialités: Mathématiques et NSI</p>
+                        <p>Mention: Bien</p>
                     </div>
                 </div>
             </div>
@@ -251,24 +322,29 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-date">2025 - aujourd'hui</div>
                     <div class="timeline-content">
-                        <h3>Alternance de BUT 2 et 3 Informatique</h3>
-                        <p>Trucksme, 06500 Valbonne</p>
-                        <ul>
-                            <li>Langages et technologies utilisés : Kotlin (Applications Android), Web services.</li>
-                        </ul>
+                        <h3>Alternance de BUT 3 Informatique</h3>
+                        <p>Azur Info, 06200 Nice</p>
+                        <p>Développement Python et Java sur une application de type ETL.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2024</div>
+                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Alternance de BUT 2 Informatique</h3>
+                        <p>Trucksme, 06500 Valbonne</p>
+                        <p>Kotlin (Applications Android), Web services.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Avril - Juin 2024</div>
                     <div class="timeline-content">
                         <h3>Stage de BUT 2 Informatique</h3>
                         <p>CADAM, 06200 Nice</p>
-                        <ul>
-                            <li>Langages et technologies utilisés : ASP.NET (C#), Web services. </li>
-                        </ul>
+                        <p>ASP.NET (C#), Web services.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -281,21 +357,11 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021</div>
-                    <div class="timeline-content">
-                        <h3>Bénévole</h3>
-                        <p>Association, 06700 Saint-Laurent-du-Var</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
                     <div class="timeline-date">2019</div>
                     <div class="timeline-content">
                         <h3>Stagiaire</h3>
                         <p>SM Informatiques, 06200 Nice</p>
-                        <ul>
-                            <li>Réparations de matériels informatiques</li>
-                        </ul>
+                        <p>Réparations de matériels informatiques</p>
                     </div>
                 </div>
             </div>
@@ -323,15 +389,6 @@
                         <div class="contact-details">
                             <h3>Téléphone</h3>
                             <p>+33 6 29 67 64 54 </p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Localisation</h3>
-                            <p>Nice, France </p>
                         </div>
                     </div>
                     <div class="social-links">
@@ -365,12 +422,12 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
-                <h3>Nicolas Marques</h3>
+                <h3>Nicolas MARQUES</h3>
                 <p>Alternant en Informatique</p>
             </div>
             <div class="footer-links">
                 <a href="#accueil">Accueil</a>
-                <a href="#a-propos">À Propos</a>
+                <a href="#a-propos">Mon Profil</a>
                 <a href="#competences">Compétences</a>
                 <a href="#projets">Projets</a>
                 <a href="#formation">Formation</a>
@@ -383,7 +440,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>27 Août 2025 Nicolas Marques</p>
+            <p>&copy; 2026 Nicolas MARQUES</p>
         </div>
     </div>
 </footer>
