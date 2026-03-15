@@ -1094,12 +1094,13 @@ footer::before {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     nav {
         padding: 12px 5%;
     }
 
     .nav-links {
+        display: none;
         position: absolute;
         right: 0;
         top: 66px;
@@ -1115,18 +1116,13 @@ footer::before {
         align-items: center;
         gap: 0;
         padding: 12px 0;
-        transform: translateY(-150%);
-        opacity: 0;
-        transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-                    opacity 0.35s ease;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
         border-bottom: 1px solid rgba(59, 130, 246, 0.15);
         z-index: 999;
     }
 
     .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
+        display: flex;
     }
 
     .nav-links li {
